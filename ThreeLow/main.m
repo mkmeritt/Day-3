@@ -8,17 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "Dice.h"
+#import "GameController.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
        
-        Dice *dice1 = [[Dice alloc] init];
-        Dice *dice2 = [[Dice alloc] init];
-        Dice *dice3 = [[Dice alloc] init];
-        Dice *dice4 = [[Dice alloc] init];
-        Dice *dice5 = [[Dice alloc] init];
         
         BOOL isRunning = YES;
+        
+        
 
         
         while(isRunning) {
@@ -35,12 +33,7 @@ int main(int argc, const char * argv[]) {
             
         if([inputString isEqualToString:@"roll\n"]) {
             
-            [dice1 randomizeValue];
-            [dice2 randomizeValue];
-            [dice3 randomizeValue];
-            [dice4 randomizeValue];
-            [dice5 randomizeValue];
-            
+
         }
             
         }
