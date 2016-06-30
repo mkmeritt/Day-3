@@ -8,18 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "Dice.h"
+#import <Cocoa/Cocoa.h>
 
 @interface GameController : NSObject
 
 @property (nonatomic, retain) NSArray *diceArray;
 @property (nonatomic, retain) NSMutableArray *heldDice;
+@property (nonatomic, retain) Dice* currentDice;
 
 
 -(id)init;
 -(void)holdDie: (NSNumber*)givenNumber;
 -(void)createDice;
+-(void)printDice;
 
--(void)printDiceArray;
--(void)printHeldArray;
 
 @end

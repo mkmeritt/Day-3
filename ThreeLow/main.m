@@ -41,7 +41,6 @@ int main(int argc, const char * argv[]) {
             NSNumber* num = [NSNumber numberWithInt:val];
             
             [controller holdDie:num];
-          
 
         }
         

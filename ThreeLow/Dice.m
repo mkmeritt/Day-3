@@ -14,6 +14,7 @@
     
     if(self = [super init]) {
         self.currentValue = self.randomizeValue;
+        self.held = NO;
     }
     
     return self;
