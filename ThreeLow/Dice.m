@@ -19,11 +19,14 @@
     return self;
 }
 
--(int)randomizeValue {
+-(NSNumber*)randomizeValue {
     int value = arc4random() % 6 + 1;
+    
+    NSNumber* num = [NSNumber numberWithInt:value];
 
     NSLog(@"Value is now %d", value);
-    return value;
+    
+    return num;
 }
 
 @end

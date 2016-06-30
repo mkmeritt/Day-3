@@ -16,7 +16,10 @@
 
 
 -(id)init;
--(void)holdDie: (int)givenNumber;
+-(void)holdDie: (NSNumber*)givenNumber;
 -(void)createDice;
+
+-(void)printDiceArray;
+-(void)printHeldArray;
 
 @end

@@ -63,11 +63,11 @@
 		662A43301D245E7900AB64FA /* ThreeLow */ = {
 			isa = PBXGroup;
 			children = (
-				662A43311D245E7900AB64FA /* main.m */,
 				662A43381D245F0B00AB64FA /* Dice.h */,
-				662A43391D245F0B00AB64FA /* Dice.m */,
 				662A433B1D24789700AB64FA /* GameController.h */,
+				662A43391D245F0B00AB64FA /* Dice.m */,
 				662A433C1D24789700AB64FA /* GameController.m */,
+				662A43311D245E7900AB64FA /* main.m */,
 			);
 			path = ThreeLow;
 			sourceTree = "<group>";

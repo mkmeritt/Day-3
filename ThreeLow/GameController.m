@@ -14,19 +14,23 @@
     
     if(self = [super init]) {
     [self createDice];
+  
     }
     
     return self;
 }
 
--(void)holdDie:(int)givenNumber {
+-(void)holdDie:(NSNumber*)givenNumber {
     
     for (Dice* dice in self.diceArray) {    //for all the dice in the dice array
-        if (dice.currentValue == givenNumber) {   //if any of the dice in the array are equal to the number
-            
+        if ([dice.currentValue isEqualToNumber:givenNumber]) {   //if any of the dice in the array are equal to the number
+         
               [self.heldDice addObject:dice];   //add this dice to heldDice Array
-            
+             NSLog(@"Held dice: [%@]",dice.currentValue);
         }
+        
+        else{
+            NSLog(@"Un-held dice: [%@]",dice.currentValue);        }
     }
 }
 
@@ -37,8 +41,10 @@
     Dice* dice4 = [[Dice alloc] init];
     Dice* dice5 = [[Dice alloc] init];
     
-    [self.diceArray initWithObjects:dice1, dice2, dice3, dice4, dice5, nil];
-
+    self.diceArray = [[NSMutableArray alloc] initWithObjects:dice1, dice2, dice3, dice4, dice5, nil];
+    
 }
+
+
 
 @end
