@@ -15,12 +15,14 @@
 @property (nonatomic, retain) NSArray *diceArray;
 @property (nonatomic, retain) NSMutableArray *heldDice;
 @property (nonatomic, retain) Dice* currentDice;
+@property (nonatomic, assign) int score;
 
 
 -(id)init;
 -(void)holdDie: (NSNumber*)givenNumber;
 -(void)createDice;
 -(void)printDice;
+-(void)showScore;
 
 
 @end

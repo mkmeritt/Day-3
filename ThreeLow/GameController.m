@@ -31,19 +31,19 @@
         if ([dice.currentValue isEqualToNumber:givenNumber]) {   //if any of the dice in the array are equal to the number
          
             [self.heldDice addObject:dice];   //add this dice to heldDice Array
-             NSLog(@"Held dice: [%@]",dice.currentValue);
             dice.held = YES;
         }
         
         else{
-            NSLog(@"Un-held dice: %@",dice.currentValue);
+      
             dice.held = NO;
         }
         
-        
-        [NSThread sleepForTimeInterval:0.5];
+     
 
     }
+    
+       [self printDice];
     
     for(NSInteger i = 0; i <= self.diceArray.count - 1; i++) {
         
@@ -92,12 +92,21 @@
       for (Dice* dice in self.diceArray) {
           if(dice.held) {
                   NSLog(@"Held dice: [%@]",dice.currentValue);
+              self.score += 5;
           }
           
           if(!dice.held) {
               NSLog(@"Unheld dice: %@", dice.currentValue);
           }
+          
       }
+    
+    [self showScore];
+
+}
+
+-(void)showScore{
+    NSLog(@"Your score is: %d", self.score);
 }
 
 -(void)createDice {
